@@ -936,7 +936,7 @@ security-bar {
             <div class="account-info">
                 <div class="account-title">Current Account</div>
                 <div class="account-number">Account: US29 CHMC 6016 1331 9268 19</div>
-                <div class="balance" id="balanceDisplay">26,095.00</div>
+                <div class="balance" id="balanceDisplay">51,095.00</div>
                 <button id="toggleBalance" class="balance-toggle">
                     <i class="fas fa-eye"></i> Show Balance
                 </button>
@@ -964,6 +964,16 @@ security-bar {
                 <a href="#" class="view-all">View All</a>
             </div>
             <div class="transactions">
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="transaction-details">
+                        <div class="transaction-title">Reversed - Late 1/2 Withdrawal</div>
+                        <div class="transaction-date" id="todayDate"></div>
+                    </div>
+                    <div class="transaction-amount positive">$25,000.00</div>
+                </div>
                 <div class="transaction-item">
                     <div class="transaction-icon">
                         <i class="fas fa-exchange-alt"></i>
@@ -1445,6 +1455,13 @@ security-bar {
             }
         }
         
+        // Set today's date
+        function setTodayDate() {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('todayDate').textContent = today.toLocaleDateString('en-US', options);
+        }
+        
         // Toggle balance visibility
         function toggleBalance() {
             const balanceDisplay = document.getElementById('balanceDisplay');
@@ -1551,6 +1568,7 @@ security-bar {
             document.getElementById('loginScreen').style.display = 'none';
             document.getElementById('app').style.display = 'block';
             setGreeting();
+            setTodayDate();
         }
         
         // Navigation function
