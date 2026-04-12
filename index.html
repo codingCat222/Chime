@@ -11,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           /* display: none;*/
         }
         
         :root {
@@ -87,6 +86,83 @@
             border-radius: 15px;
             box-shadow: var(--shadow);
             position: relative;
+        }
+        
+        .card-account {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            margin: 20px 15px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .card-account-title {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .card-account-balance {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .virtual-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .discover-logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .virtual-card-number {
+            font-family: monospace;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+        
+        .virtual-card-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 0.8rem;
+        }
+        
+        .card-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .card-control-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .card-control-btn:hover {
+            background: rgba(255,255,255,0.35);
+            transform: translateY(-2px);
         }
         
         .balance {
@@ -225,7 +301,8 @@
         .positive {
             color: var(--success-green);
         }
-        . pending {
+        
+        .pending {
             color: var(--pending-yellow);
         }
         
@@ -553,37 +630,6 @@
             display: none;
         }
         
-        .blockchain-switch {
-            display: flex;
-            margin-bottom: 15px;
-            background: var(--light-blue);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .blockchain-option {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .blockchain-option:hover {
-            background: rgba(26, 35, 126, 0.1);
-        }
-        
-        .blockchain-option.active {
-            background: var(--primary-blue);
-            color: white;
-        }
-        
-        .crypto-icon {
-            color: var(--crypto-gold);
-            font-size: 1.5rem;
-            margin-right: 10px;
-        }
-        
         .app-section {
             display: none;
             animation: fadeIn 0.5s ease;
@@ -655,220 +701,26 @@
             text-transform: uppercase;
         }
         
-        .card-limit {
-            background: var(--card-bg);
-            color: var(--dark-text);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .card-limit:hover {
-            transform: scale(1.02);
-        }
-        
-        .profile-section {
-            background: var(--card-bg);
-            margin: 20px 15px;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        
-        .profile-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .profile-pic {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--light-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-right: 20px;
-            transition: var(--transition);
-        }
-        
-        .profile-pic:hover {
-            transform: scale(1.05);
-        }
-        
-        .profile-info h2 {
-            margin-bottom: 5px;
-        }
-        
-        .profile-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        
-        .detail-card {
-            background: var(--light-blue);
-            padding: 15px;
-            border-radius: 10px;
-            transition: var(--transition);
-        }
-        
-        .detail-card:hover {
-            background: var(--accent-blue);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .detail-card h3 {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        .detail-card p {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        
-        .transfer-section {
-            background: var(--card-bg);
-            margin: 20px 15px;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        
-        .transfer-form .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .security-indicator {
-            height: 5px;
-            background: #ddd;
-            border-radius: 3px;
-            margin-top: 5px;
-            overflow: hidden;
-        }
-security-bar {
-            height: 100%;
-            width: 0%;
-            background: var(--warning-red);
-            transition: width 0.5s ease;
-        }
-        
-        .security-bar.medium {
-            background: orange;
-            width: 50%;
-        }
-        
-        .security-bar.strong {
+        .toast-message {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
             background: var(--success-green);
-            width: 100%;
-        }
-        
-        .security-text {
-            font-size: 0.8rem;
-            text-align: right;
-            margin-top: 3px;
-        }
-        
-        .transfer-history {
-            margin-top: 30px;
-        }
-        
-        .history-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--light-blue);
-            transition: var(--transition);
-        }
-        
-        .history-item:hover {
-            transform: translateX(5px);
-        }
-        
-        .history-item:last-child {
-            border-bottom: none;
-        }
-        
-        .history-amount.negative {
-            color: var(--warning-red);
-        }
-        
-        .history-amount.positive {
-            color: var(--success-green);
-        }
-        
-        .dark-mode-toggle {
-            background: var(--light-blue);
-            border: none;
-            border-radius: 20px;
-            width: 50px;
-            height: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 10px;
-        }
-        
-        .dark-mode-toggle:hover {
-            background: var(--accent-blue);
             color: white;
-            transform: rotate(30deg);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            z-index: 2000;
+            animation: fadeInOut 2s ease;
+            white-space: nowrap;
         }
         
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 24px;
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 16px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .slider {
-            background-color: var(--accent-blue);
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(26px);
+        @keyframes fadeInOut {
+            0% { opacity: 0; bottom: 80px; }
+            15% { opacity: 1; bottom: 100px; }
+            85% { opacity: 1; bottom: 100px; }
+            100% { opacity: 0; bottom: 80px; }
         }
         
         @media (max-width: 480px) {
@@ -883,16 +735,6 @@ security-bar {
             
             .card-container {
                 grid-template-columns: 1fr;
-            }
-            
-            .profile-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .profile-pic {
-                margin-right: 0;
-                margin-bottom: 15px;
             }
         }
     </style>
@@ -936,10 +778,40 @@ security-bar {
             <div class="account-info">
                 <div class="account-title">Current Account</div>
                 <div class="account-number">Account: US29 CHMC 6016 1331 9268 19</div>
-                <div class="balance" id="balanceDisplay">51,095.00</div>
+                <div class="balance" id="balanceDisplay">41,000.00</div>
                 <button id="toggleBalance" class="balance-toggle">
                     <i class="fas fa-eye"></i> Show Balance
                 </button>
+            </div>
+
+            <!-- Card Account Section -->
+            <div class="card-account">
+                <div class="card-account-title">Virtual Card Account</div>
+                <div class="card-account-balance" id="cardAccountBalance">$10,000.00</div>
+                
+                <div class="virtual-card">
+                    <div class="discover-logo">
+                        <span>DISCOVER</span>
+                        <span>VIRTUAL CARD</span>
+                    </div>
+                    <div class="virtual-card-number">6011 4087 1234 5678</div>
+                    <div class="virtual-card-details">
+                        <span>ANDRE CAMPBELL</span>
+                        <span>04/28</span>
+                        <span id="cvvDisplay" style="cursor:pointer;" onclick="toggleCVV()">CVV: ***</span>
+                    </div>
+                    <div class="card-controls">
+                        <button class="card-control-btn" onclick="copyCardDetails()">
+                            <i class="fas fa-copy"></i> Copy Card Details
+                        </button>
+                        <button class="card-control-btn" onclick="freezeCard()">
+                            <i class="fas fa-snowflake"></i> Freeze Card
+                        </button>
+                        <button class="card-control-btn" onclick="toggleCVV()">
+                            <i class="fas fa-eye"></i> Show CVV
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <!-- Quick Actions -->
@@ -958,7 +830,7 @@ security-bar {
                 </button>
             </div>
 
-            <!-- Recent Transactions -->
+            <!-- Recent Transactions - Updated to 2026 -->
             <div class="section-title">
                 Recent Transactions
                 <a href="#" class="view-all">View All</a>
@@ -970,7 +842,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Reversed - Late 1/2 Withdrawal</div>
-                        <div class="transaction-date" id="todayDate"></div>
+                        <div class="transaction-date">April 12, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$25,000.00</div>
                 </div>
@@ -980,7 +852,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Credit</div>
-                        <div class="transaction-date"> November 4, 2025</div>
+                        <div class="transaction-date">April 10, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$315.00</div>
                 </div>
@@ -990,7 +862,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Pending</div>
-                        <div class="transaction-date">November 4, 2025</div>
+                        <div class="transaction-date">April 9, 2026</div>
                     </div>
                     <div class="transaction-amount pending" style="color:#f4c430;">$25,000.00</div>
                 </div>
@@ -1000,7 +872,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Reverse Credit</div>
-                        <div class="transaction-date">October 25, 2025</div>
+                        <div class="transaction-date">April 5, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$50,000.00</div>
                 </div>
@@ -1010,7 +882,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Wire Transfer</div>
-                        <div class="transaction-date">October 25, 2025</div>
+                        <div class="transaction-date">April 1, 2026</div>
                     </div>
                     <div class="transaction-amount negative">$50,000.00</div>
                 </div>
@@ -1020,7 +892,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Direct Deposit</div>
-                        <div class="transaction-date">October 13, 2025</div>
+                        <div class="transaction-date">March 28, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$320.00</div>
                 </div>
@@ -1030,7 +902,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Direct Deposit</div>
-                        <div class="transaction-date">October 8, 2025</div>
+                        <div class="transaction-date">March 22, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$320.00</div>
                 </div>
@@ -1040,7 +912,7 @@ security-bar {
                     </div>
                     <div class="transaction-details">
                         <div class="transaction-title">Business Payment</div>
-                        <div class="transaction-date">October 3, 2025</div>
+                        <div class="transaction-date">March 15, 2026</div>
                     </div>
                     <div class="transaction-amount positive">$50,000.00</div>
                 </div>
@@ -1049,31 +921,20 @@ security-bar {
 
         <!-- Transfer Section -->
         <div id="transferSection" class="app-section">
-            <div class="transfer-section">
+            <div class="transfer-section" style="background: var(--card-bg); margin: 20px 15px; padding: 20px; border-radius: 15px; box-shadow: var(--shadow);">
                 <h2 class="modal-title">Make a Transfer</h2>
                 <form id="transferForm" onsubmit="processTransfer(event)">
                     <div class="form-group">
                         <label class="form-label">From Account</label>
-                        <select class="form-control">
-                            <option>Current Account (US29 CHMC 6016 1331 9268 19)</option>
-                            <option>Savings Account (US29 CHMC 6016 1331 9268 20)</option>
-                            <option>Investment Account (US29 CHMC 6016 1331 9268 21)</option>
+                        <select class="form-control" id="fromAccountSelect">
+                            <option value="checking">Current Account ($41,000.00)</option>
+                            <option value="card">Virtual Card Account ($10,000.00)</option>
                         </select>
                     </div>
                     
-                    <div class="blockchain-switch">
-                        <div class="blockchain-option active" onclick="setTransferType('bank')">Bank Transfer</div>
-                        <div class="blockchain-option" onclick="setTransferType('crypto')">Blockchain</div>
-                    </div>
-                    
-                    <div class="form-group" id="bankTransferFields">
+                    <div class="form-group">
                         <label class="form-label">To Account</label>
                         <input type="text" class="form-control" placeholder="Account number" required>
-                    </div>
-                    
-                    <div class="form-group" id="cryptoTransferFields" style="display: none;">
-                        <label class="form-label">Blockchain Address</label>
-                        <input type="text" class="form-control" placeholder="e.g. 0x742d35Cc6634C0532925a3b844Bc454e4438f44e" required>
                     </div>
                     
                     <div class="form-group">
@@ -1096,19 +957,19 @@ security-bar {
                 
                 <div class="transfer-history">
                     <h3 class="section-title">Recent Transfers</h3>
-                    <div class="history-item">
+                    <div class="history-item" style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--light-blue);">
                         <div>
                             <div class="transaction-title">Amazon</div>
-                            <div class="transaction-date">Sep 2, 2025</div>
+                            <div class="transaction-date">Apr 5, 2026</div>
                         </div>
-                        <div class="history-amount negative">$89.99</div>
+                        <div class="history-amount negative" style="color: var(--warning-red);">$89.99</div>
                     </div>
-                    <div class="history-item">
+                    <div class="history-item" style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--light-blue);">
                         <div>
                             <div class="transaction-title">Utility Company</div>
-                            <div class="transaction-date">Aug 30, 2025</div>
+                            <div class="transaction-date">Mar 30, 2026</div>
                         </div>
-                        <div class="history-amount negative">$120.50</div>
+                        <div class="history-amount negative" style="color: var(--warning-red);">$120.50</div>
                     </div>
                 </div>
             </div>
@@ -1124,38 +985,31 @@ security-bar {
             <div class="card-container">
                 <div class="card">
                     <div class="card-logo">
-                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-discover fa-2x"></i>
                     </div>
-                    <div class="card-number">**** **** **** 4512</div>
+                    <div class="card-number">6011 4087 1234 5678</div>
                     <div class="card-details">
                         <div class="card-expiry">
                             <div>EXPIRES</div>
-                            <div>08/26</div>
+                            <div>04/28</div>
                         </div>
-                        <div class="card-cvv">
+                        <div class="card-cvv" id="cardCvv" onclick="toggleCardCVV()" style="cursor:pointer;">
                             <div>CVV</div>
                             <div>***</div>
                         </div>
                     </div>
                     <div class="card-name">ANDRE CAMPBELL</div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-logo">
-                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                    <div class="card-controls" style="margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="card-control-btn" onclick="copyCardDetails()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.7rem;">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="card-control-btn" onclick="freezeCard()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.7rem;">
+                            <i class="fas fa-snowflake"></i> Freeze
+                        </button>
+                        <button class="card-control-btn" onclick="toggleCardCVV()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.7rem;">
+                            <i class="fas fa-eye"></i> Show CVV
+                        </button>
                     </div>
-                    <div class="card-number">**** **** **** 7821</div>
-                    <div class="card-details">
-                        <div class="card-expiry">
-                            <div>EXPIRES</div>
-                            <div>12/26</div>
-                        </div>
-                        <div class="card-cvv">
-                            <div>CVV</div>
-                            <div>***</div>
-                        </div>
-                    </div>
-                    <div class="card-name">ANDRE CAMPBELL</div>
                 </div>
             </div>
             
@@ -1163,32 +1017,32 @@ security-bar {
                 Card Limits
             </div>
             
-            <div class="card-limit">
+            <div class="card-limit" style="background: var(--card-bg); padding: 15px; border-radius: 10px; margin: 0 15px; box-shadow: var(--shadow);">
                 <div class="form-group">
                     <label class="form-label">Daily ATM Withdrawal Limit</label>
                     <input type="range" min="100" max="1000" value="300" class="form-control" oninput="document.getElementById('atmLimit').textContent = '$' + this.value">
-                    <div class="security-text" id="atmLimit">$50,000 per day</div>
+                    <div class="security-text" id="atmLimit">$300 per day</div>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Online Purchase Limit</label>
                     <input type="range" min="500" max="5000" value="2000" class="form-control" oninput="document.getElementById('onlineLimit').textContent = '$' + this.value">
-                    <div class="security-text" id="onlineLimit">$30,000 per day</div>
+                    <div class="security-text" id="onlineLimit">$2,000 per day</div>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Contactless Limit</label>
                     <input type="range" min="30" max="200" value="100" class="form-control" oninput="document.getElementById('contactlessLimit').textContent = '$' + this.value">
-                    <div class="security-text" id="contactlessLimit">$100,000 per transaction</div>
+                    <div class="security-text" id="contactlessLimit">$100 per transaction</div>
                 </div>
             </div>
         </div>
 
         <!-- Profile Section -->
         <div id="profileSection" class="app-section">
-            <div class="profile-section">
-                <div class="profile-header">
-                    <div class="profile-pic">
+            <div class="profile-section" style="background: var(--card-bg); margin: 20px 15px; padding: 20px; border-radius: 15px; box-shadow: var(--shadow);">
+                <div class="profile-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div class="profile-pic" style="width: 80px; height: 80px; border-radius: 50%; background: var(--light-blue); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--primary-blue); margin-right: 20px;">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="profile-info">
@@ -1198,33 +1052,33 @@ security-bar {
                     </div>
                 </div>
                 
-                <div class="profile-details">
-                    <div class="detail-card">
+                <div class="profile-details" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>ADDRESS</h3>
                         <p>123 Main Street, New York, NY 10001, USA</p>
                     </div>
                     
-                    <div class="detail-card">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>EMAIL</h3>
-                        <p>Kj_kuhh@icloud.com </p>
+                        <p>Kj_kuhh@icloud.com</p>
                     </div>
                     
-                    <div class="detail-card">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>PHONE</h3>
                         <p>+1 (212) 555-7890</p>
                     </div>
                     
-                    <div class="detail-card">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>DATE OF BIRTH</h3>
                         <p>June 15, 1990</p>
                     </div>
                     
-                    <div class="detail-card">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>NATIONALITY</h3>
                         <p>American</p>
                     </div>
                     
-                    <div class="detail-card">
+                    <div class="detail-card" style="background: var(--light-blue); padding: 15px; border-radius: 10px;">
                         <h3>TAX ID</h3>
                         <p>TX 987 654 321</p>
                     </div>
@@ -1234,16 +1088,7 @@ security-bar {
                     Security Settings
                 </div>
                 
-                <div class="card-limit">
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Enter new password" oninput="updatePasswordStrength(this.value)">
-                        <div class="security-indicator">
-                            <div class="security-bar" id="securityBar"></div>
-                        </div>
-                        <div class="security-text" id="passwordStrength">Enter a password</div>
-                    </div>
-                    
+                <div class="card-limit" style="background: var(--card-bg); padding: 15px; border-radius: 10px; box-shadow: var(--shadow);">
                     <div class="form-group">
                         <label class="form-label">Two-Factor Authentication</label>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -1270,7 +1115,7 @@ security-bar {
                         <label class="form-label">Dark Mode</label>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span>Toggle Dark Mode</span>
-                            <button class="dark-mode-toggle" id="darkModeToggle">
+                            <button class="dark-mode-toggle" id="darkModeToggle" style="background: var(--light-blue); border: none; border-radius: 20px; width: 50px; height: 26px; display: flex; align-items: center; justify-content: center; color: var(--primary-blue); cursor: pointer;">
                                 <i class="fas fa-moon"></i>
                             </button>
                         </div>
@@ -1278,7 +1123,8 @@ security-bar {
                 </div>
             </div>
         </div>
-<!-- Bottom Navigation -->
+
+        <!-- Bottom Navigation -->
         <div class="bottom-nav">
             <div class="nav-item active" data-section="homeSection">
                 <i class="fas fa-home"></i>
@@ -1303,21 +1149,10 @@ security-bar {
             <div class="modal-content">
                 <span class="close-btn" onclick="closeModal('transfer')">&times;</span>
                 <h2 class="modal-title">Transfer Money</h2>
-                
-                <div class="blockchain-switch">
-                    <div class="blockchain-option active" onclick="setTransferType('bank')">Bank Transfer</div>
-                    <div class="blockchain-option" onclick="setTransferType('crypto')">Blockchain</div>
-                </div>
-                
                 <form id="modalTransferForm" onsubmit="processModalTransfer(event)">
-                    <div class="form-group" id="modalBankTransferFields">
+                    <div class="form-group">
                         <label class="form-label">To Account</label>
                         <input type="text" class="form-control" placeholder="Account number" required>
-                    </div>
-                    
-                    <div class="form-group" id="modalCryptoTransferFields" style="display: none;">
-                        <label class="form-label">Blockchain Address</label>
-                        <input type="text" class="form-control" placeholder="e.g. 0x742d35Cc6634C0532925a3b844Bc454e4438f44e" required>
                     </div>
                     
                     <div class="form-group">
@@ -1345,13 +1180,12 @@ security-bar {
             <div class="modal-content">
                 <span class="close-btn" onclick="closeModal('deposit')">&times;</span>
                 <h2 class="modal-title">Deposit Funds</h2>
-                
                 <form>
                     <div class="form-group">
                         <label class="form-label">To Account</label>
                         <select class="form-control">
                             <option>Current Account (US29 CHMC 6016 1331 9268 19)</option>
-                            <option>Savings Account (US29 CHMC 6016 1331 9268 20)</option>
+                            <option>Virtual Card Account</option>
                         </select>
                     </div>
                     
@@ -1379,6 +1213,59 @@ security-bar {
             </div>
         </div>
 
+        <!-- Bill Pay Modal -->
+        <div id="billpayModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('billpay')">&times;</span>
+                <h2 class="modal-title">Pay Bills</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Payee</label>
+                        <select class="form-control">
+                            <option>Electric Company</option>
+                            <option>Water Utilities</option>
+                            <option>Internet Provider</option>
+                            <option>Credit Card</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Amount ($)</label>
+                        <input type="number" class="form-control" placeholder="0.00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Payment Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    
+                    <button type="submit" class="btn">Schedule Payment</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Receipt Modal -->
+        <div id="receiptModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('receipt')">&times;</span>
+                <h2 class="modal-title">Recent Receipts</h2>
+                <div class="receipt" style="margin-top: 20px;">
+                    <div class="receipt-header">
+                        <div class="receipt-title">Chimecredit</div>
+                        <div>Transaction Receipt</div>
+                    </div>
+                    <div class="receipt-details">
+                        <div class="receipt-item"><span>Date:</span><span>April 12, 2026</span></div>
+                        <div class="receipt-item"><span>Description:</span><span>Wire Transfer</span></div>
+                        <div class="receipt-item"><span>Amount:</span><span>$50,000.00</span></div>
+                        <div class="receipt-item"><span>Status:</span><span>Completed</span></div>
+                    </div>
+                    <div class="receipt-footer">Transaction ID: CHMC-2026-0421</div>
+                </div>
+                <button class="btn print-btn" onclick="window.print()" style="margin-top: 15px;"><i class="fas fa-print"></i> Print</button>
+            </div>
+        </div>
+
         <!-- Transfer Success Modal -->
         <div id="successModal" class="modal">
             <div class="modal-content">
@@ -1403,7 +1290,7 @@ security-bar {
                             </div>
                             <div class="receipt-item">
                                 <span>From:</span>
-                                <span>Current Account</span>
+                                <span id="receiptFrom"></span>
                             </div>
                             <div class="receipt-item">
                                 <span>To:</span>
@@ -1429,7 +1316,7 @@ security-bar {
                         </div>
                         
                         <div class="receipt-footer">
-                            Transaction ID: CHMC-2023-098765
+                            Transaction ID: CHMC-2026-098765
                         </div>
                     </div>
                     
@@ -1440,7 +1327,11 @@ security-bar {
             </div>
         </div>
     </div>
-<script>
+
+    <script>
+        let cvvVisible = false;
+        let cardCvvVisible = false;
+        
         // Set greeting based on time of day
         function setGreeting() {
             const hour = new Date().getHours();
@@ -1453,13 +1344,6 @@ security-bar {
             } else {
                 greeting.textContent = 'Good evening';
             }
-        }
-        
-        // Set today's date
-        function setTodayDate() {
-            const today = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('todayDate').textContent = today.toLocaleDateString('en-US', options);
         }
         
         // Toggle balance visibility
@@ -1476,79 +1360,129 @@ security-bar {
             }
         }
         
+        // Copy card details
+        function copyCardDetails() {
+            const cardDetails = "DISCOVER VIRTUAL CARD\n6011 4087 1234 5678\nANDRE CAMPBELL\nExpires: 04/28\nCVV: 133";
+            navigator.clipboard.writeText(cardDetails);
+            showToast("Card details copied!");
+        }
+        
+        // Freeze card
+        function freezeCard() {
+            showToast("Card frozen successfully!");
+        }
+        
+        // Toggle CVV on virtual card
+        function toggleCVV() {
+            const cvvDisplay = document.getElementById('cvvDisplay');
+            if (cvvVisible) {
+                cvvDisplay.innerHTML = 'CVV: ***';
+                cvvVisible = false;
+            } else {
+                cvvDisplay.innerHTML = 'CVV: 133';
+                cvvVisible = true;
+            }
+        }
+        
+        // Toggle CVV on card section
+        function toggleCardCVV() {
+            const cvvElement = document.querySelector('#cardsSection .card-cvv div:last-child');
+            if (cardCvvVisible) {
+                cvvElement.innerHTML = '***';
+                cardCvvVisible = false;
+            } else {
+                cvvElement.innerHTML = '133';
+                cardCvvVisible = true;
+            }
+        }
+        
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast-message';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
+        }
+        
         // Show modal
         function showModal(modalId) {
-            document.getElementById(modalId + 'Modal').style.display = 'block';
+            const modal = document.getElementById(modalId + 'Modal');
+            if (modal) modal.style.display = 'block';
         }
         
         // Close modal
         function closeModal(modalId) {
-            document.getElementById(modalId + 'Modal').style.display = 'none';
+            const modal = document.getElementById(modalId + 'Modal');
+            if (modal) modal.style.display = 'none';
         }
         
-        // Set transfer type
-        function setTransferType(type) {
-            const bankFields = document.querySelectorAll('#bankTransferFields, #modalBankTransferFields');
-            const cryptoFields = document.querySelectorAll('#cryptoTransferFields, #modalCryptoTransferFields');
-            const bankOptions = document.querySelectorAll('.blockchain-option:first-child');
-            const cryptoOptions = document.querySelectorAll('.blockchain-option:last-child');
-            
-            if (type === 'bank') {
-                bankFields.forEach(field => field.style.display = 'block');
-                cryptoFields.forEach(field => field.style.display = 'none');
-                bankOptions.forEach(option => option.classList.add('active'));
-                cryptoOptions.forEach(option => option.classList.remove('active'));
-            } else {
-                bankFields.forEach(field => field.style.display = 'none');
-                cryptoFields.forEach(field => field.style.display = 'block');
-                bankOptions.forEach(option => option.classList.remove('active'));
-                cryptoOptions.forEach(option => option.classList.add('active'));
-            }
-        }
-        
-        // Process transfer from modal
-        function processModalTransfer(e) {
+        // Process transfer
+        function processTransfer(e) {
             e.preventDefault();
-            
-            // Get form values
             const recipient = e.target.querySelector('[placeholder="Enter recipient name"]').value;
             const amount = e.target.querySelector('[placeholder="0.00"]').value;
-            const account = e.target.querySelector('[placeholder="Account number"], [placeholder^="e.g. 0x"]').value;
-            const reference = e.target.querySelector('[placeholder="e.g. Rent payment"]').value || 'No reference';
+            const account = e.target.querySelector('[placeholder="Account number"]').value;
+            const reference = e.target.querySelector('[placeholder="e.g. Rent payment"]')?.value || 'No reference';
+            const fromAccount = document.getElementById('fromAccountSelect').value;
             
-            // Show success modal
-            closeModal('transfer');
-            showModal('success');
+            let fromAccountName = fromAccount === 'checking' ? 'Current Account' : 'Virtual Card Account';
+            let currentBalance = fromAccount === 'checking' ? 41000 : 10000;
+            let newBalance = currentBalance - parseFloat(amount);
             
-            // Update receipt
+            if (newBalance < 0) {
+                showToast("Insufficient funds!");
+                return;
+            }
+            
+            if (fromAccount === 'checking') {
+                document.getElementById('balanceDisplay').textContent = newBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+            } else {
+                document.getElementById('cardAccountBalance').textContent = '$' + newBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+            }
+            
             document.getElementById('receiptDate').textContent = new Date().toLocaleString();
+            document.getElementById('receiptFrom').textContent = fromAccountName;
             document.getElementById('receiptRecipient').textContent = recipient;
             document.getElementById('receiptAccount').textContent = account;
             document.getElementById('receiptAmount').textContent = '$' + amount;
             document.getElementById('receiptReference').textContent = reference;
             document.getElementById('receiptTotal').textContent = '$' + amount;
             
-            // Update balance
-            const balanceElement = document.getElementById('balanceDisplay');
-            const currentBalance = parseFloat(balanceElement.textContent.replace(/,/g, ''));
-            const newBalance = currentBalance - parseFloat(amount);
-            balanceElement.textContent = newBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+            showModal('success');
+            e.target.reset();
+        }
+        
+        function processModalTransfer(e) {
+            e.preventDefault();
+            const recipient = e.target.querySelector('[placeholder="Enter recipient name"]').value;
+            const amount = e.target.querySelector('[placeholder="0.00"]').value;
+            const account = e.target.querySelector('[placeholder="Account number"]').value;
+            const reference = e.target.querySelector('[placeholder="e.g. Rent payment"]')?.value || 'No reference';
             
-            // Add to recent transactions
-            const transactionsContainer = document.querySelector('.transactions');
-            const newTransaction = document.createElement('div');
-            newTransaction.className = 'transaction-item';
-            newTransaction.innerHTML = `
-                <div class="transaction-icon">
-                    <i class="fas fa-exchange-alt"></i>
-                </div>
-                <div class="transaction-details">
-                    <div class="transaction-title">${recipient}</div>
-                    <div class="transaction-date">Today</div>
-                </div>
-                <div class="transaction-amount negative">$${parseFloat(amount).toFixed(2)}</div>
-            `;
-            transactionsContainer.prepend(newTransaction);
+            let currentBalance = 41000;
+            let newBalance = currentBalance - parseFloat(amount);
+            
+            if (newBalance < 0) {
+                showToast("Insufficient funds!");
+                return;
+            }
+            
+            document.getElementById('balanceDisplay').textContent = newBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+            
+            document.getElementById('receiptDate').textContent = new Date().toLocaleString();
+            document.getElementById('receiptFrom').textContent = 'Current Account';
+            document.getElementById('receiptRecipient').textContent = recipient;
+            document.getElementById('receiptAccount').textContent = account;
+            document.getElementById('receiptAmount').textContent = '$' + amount;
+            document.getElementById('receiptReference').textContent = reference;
+            document.getElementById('receiptTotal').textContent = '$' + amount;
+            
+            closeModal('transfer');
+            showModal('success');
+            e.target.reset();
         }
         
         // Login function
@@ -1557,18 +1491,15 @@ security-bar {
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('loginError');
             
-            // Simple validation
             if (loginId.trim() === '' || password.trim() === '') {
                 errorMessage.textContent = 'Please enter both username and password';
                 errorMessage.style.display = 'block';
                 return;
             }
             
-            // For demo purposes, accept any non-empty credentials
             document.getElementById('loginScreen').style.display = 'none';
             document.getElementById('app').style.display = 'block';
             setGreeting();
-            setTodayDate();
         }
         
         // Navigation function
@@ -1577,18 +1508,13 @@ security-bar {
             
             navItems.forEach(item => {
                 item.addEventListener('click', function() {
-                    // Remove active class from all items
                     navItems.forEach(nav => nav.classList.remove('active'));
-                    
-                    // Add active class to clicked item
                     this.classList.add('active');
                     
-                    // Hide all sections
                     document.querySelectorAll('.app-section').forEach(section => {
                         section.classList.remove('active');
                     });
                     
-                    // Show selected section
                     const sectionId = this.getAttribute('data-section');
                     document.getElementById(sectionId).classList.add('active');
                 });
@@ -1598,74 +1524,34 @@ security-bar {
         // Dark mode toggle
         function setupDarkModeToggle() {
             const darkModeToggle = document.getElementById('darkModeToggle');
-            
-            darkModeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                
-                if (document.body.classList.contains('dark-mode')) {
-                    this.innerHTML = '<i class="fas fa-sun"></i>';
-                } else {
-                    this.innerHTML = '<i class="fas fa-moon"></i>';
-                }
-            });
-        }
-        
-        // Password strength indicator
-        function updatePasswordStrength(password) {
-            const securityBar = document.getElementById('securityBar');
-            const strengthText = document.getElementById('passwordStrength');
-            
-            if (password.length === 0) {
-                securityBar.className = 'security-bar';
-                securityBar.style.width = '0%';
-                strengthText.textContent = 'Enter a password';
-                return;
-            }
-            
-            if (password.length < 6) {
-                securityBar.className = 'security-bar';
-                securityBar.style.width = '25%';
-                strengthText.textContent = 'Weak';
-                strengthText.style.color = 'var(--warning-red)';
-                return;
-            }
-            
-            // Check for medium strength (contains letters and numbers)
-            if (/[a-zA-Z]/.test(password) && /[0-9]/.test(password)) {
-                securityBar.className = 'security-bar medium';
-                securityBar.style.width = '65%';
-                strengthText.textContent = 'Medium';
-                strengthText.style.color = 'orange';
-            } else {
-                securityBar.className = 'security-bar';
-                securityBar.style.width = '40%';
-                strengthText.textContent = 'Fair';
-                strengthText.style.color = 'orange';
-                return;
-            }
-            
-            // Check for strong password (contains special characters)
-            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-                securityBar.className = 'security-bar strong';
-                securityBar.style.width = '100%';
-                strengthText.textContent = 'Strong';
-                strengthText.style.color = 'var(--success-green)';
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    if (document.body.classList.contains('dark-mode')) {
+                        this.innerHTML = '<i class="fas fa-sun"></i>';
+                    } else {
+                        this.innerHTML = '<i class="fas fa-moon"></i>';
+                    }
+                });
             }
         }
         
-        // Initialize the app
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            // Setup event listeners
-            document.getElementById('toggleBalance').addEventListener('click', toggleBalance);
+            const toggleBtn = document.getElementById('toggleBalance');
+            if (toggleBtn) toggleBtn.addEventListener('click', toggleBalance);
             
-            // Set initial balance to blurred
             document.getElementById('balanceDisplay').classList.add('blurred');
             
-            // Setup navigation
             setupNavigation();
-            
-            // Setup dark mode toggle
             setupDarkModeToggle();
+            
+            // Close modals when clicking outside
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            };
         });
     </script>
 </body>
