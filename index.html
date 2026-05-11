@@ -11,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-     
         }
         
         :root {
@@ -864,18 +863,18 @@
                 <div style="background: var(--light-blue); padding: 20px; border-radius: 20px;">
                     <div class="form-group">
                         <label>Daily Spending Limit</label>
-                        <input type="range" min="100" max="10000" value="10000" class="form-control" oninput="document.getElementById('spendLimit').innerText='$'+this.value">
-                        <div id="spendLimit">$10,000 per day</div>
+                        <input type="range" min="100" max="50000" value="50000" class="form-control" oninput="document.getElementById('spendLimit').innerText='$'+this.value">
+                        <div id="spendLimit">$50,000 per day</div>
                     </div>
                     <div class="form-group">
                         <label>Per Transaction Limit</label>
-                        <input type="range" min="50" max="10000" value="5000" class="form-control" oninput="document.getElementById('transLimit').innerText='$'+this.value">
-                        <div id="transLimit">$5,000 per transaction</div>
+                        <input type="range" min="50" max="50000" value="25000" class="form-control" oninput="document.getElementById('transLimit').innerText='$'+this.value">
+                        <div id="transLimit">$25,000 per transaction</div>
                     </div>
                     <div class="form-group">
                         <label>ATM Withdrawal Limit</label>
-                        <input type="range" min="100" max="10000" value="3000" class="form-control" oninput="document.getElementById('atmLimit').innerText='$'+this.value">
-                        <div id="atmLimit">$3,000 per day</div>
+                        <input type="range" min="100" max="50000" value="10000" class="form-control" oninput="document.getElementById('atmLimit').innerText='$'+this.value">
+                        <div id="atmLimit">$10,000 per day</div>
                     </div>
                 </div>
             </div>
@@ -925,8 +924,8 @@
     <script>
         let homeCvvRevealed = false;
         let cardsCvvRevealed = false;
-        let cardWalletBalance = 10000;
-        let currentBalance = 41000;
+        let cardWalletBalance = 50000;
+        let currentBalance = 1000;
 
         function login() {
             document.getElementById('loginScreen').style.display = 'none';
